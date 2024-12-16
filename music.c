@@ -17,7 +17,7 @@
 #define C5  523
 #define REST 0
 
-#define SPKR 6
+#define SPKR 25
 
 static int melody[] = {G4, A4, B4, C5, REST};
 static int melodyCount = sizeof(melody)/sizeof(melody[0]);
