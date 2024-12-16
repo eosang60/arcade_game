@@ -26,7 +26,7 @@ extern int lcd_initialized;
 extern int spi_lcd_handle;
 
 int main(int argc,char*argv[]){
-    wiringPiSetup();
+    wiringPiSetupGpio();
 
     if(gpioInitialise() < 0){
         fprintf(stderr,"pigpio init failed\n");
@@ -34,7 +34,6 @@ int main(int argc,char*argv[]){
     }
 
     pinMode(PIN_BUZZER, OUTPUT);
-    // softToneCreate는 music_init 스레드에서 할 것이라 여기서는 안해도 됨
 
     srand(time(NULL));
 
@@ -98,7 +97,6 @@ int main(int argc,char*argv[]){
             draw_string(text_x1, text_y1, message1, rgb_to_565(255,255,255), rgb_to_565(0,0,0));
 
             // 여기서 승리 사운드 내고 싶다면 별도 함수를 music.c에 추가해 호출 가능
-            // 지금은 요청사항이 없으니 생략
         } else {
             const char *message1 = "GAME OVER";
             int text_length1 = strlen(message1);
