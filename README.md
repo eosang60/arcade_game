@@ -3,11 +3,11 @@
 C언어로 작성되었으며 pigpio와 wiringPi 라이브러리를 사용하여 하드웨어(LCD, ADC, GPIO)를 직접 제어합니다.
 
 # Features
-Game Logic: 위에서 떨어지는 장애물을 피하는 서바이벌 방식
-Controls: 아날로그 조이스틱(MCP3008)을 이용한 부드러운 이동
-Display: ST7735 1.8인치 TFT LCD (SPI 통신)
-Indicators: 3색 LED를 이용한 실시간 체력(Life) 표시
-Audio: Pthread를 활용한 백그라운드 BGM 재생 (라운드 진행 시 템포 가속)
+1. Game Logic: 위에서 떨어지는 장애물을 피하는 서바이벌 방식
+2. Controls: 아날로그 조이스틱(MCP3008)을 이용한 부드러운 이동
+3. Display: ST7735 1.8인치 TFT LCD (SPI 통신)
+4. Indicators: 3색 LED를 이용한 실시간 체력(Life) 표시
+5. Audio: Pthread를 활용한 백그라운드 BGM 재생 (라운드 진행 시 템포 가속)
 
 # Hardware Setup
 라즈베리 파이 GPIO 핀 연결 정보입니다. (pins.h 기준)
@@ -45,15 +45,15 @@ sudo ./game
 make clean
 
 # How to Play
-Start: 프로그램을 실행하면 게임이 시작됩니다.
-Move: 조이스틱을 좌우로 움직여 초록색 플레이어를 이동시킵니다.
-Life: 장애물 충돌 시 LED가 하나씩 꺼지며, 3번 충돌하면 게임 오버됩니다.
-Restart: Game Over 화면에서 버튼을 누르면 재시작합니다.
+1. Start: 프로그램을 실행하면 게임이 시작됩니다.
+2. Move: 조이스틱을 좌우로 움직여 초록색 플레이어를 이동시킵니다.
+3. Life: 장애물 충돌 시 LED가 하나씩 꺼지며, 3번 충돌하면 게임 오버됩니다.
+4. Restart: Game Over 화면에서 버튼을 누르면 재시작합니다.
 
 # File Structure
-main.c: 메인 루프, 하드웨어 초기화 및 이벤트 처리
-game.c: 게임 로직(충돌 감지, 스코어 계산), 렌더링 함수
-lcd.c: ST7735 LCD 드라이버 (SPI 커맨드 전송)
-mcp3008.c: ADC 데이터 리딩 (SPI 통신)
-music.c: 스레드 기반 BGM 재생 및 피치/속도 제어
-pins.h: GPIO 핀 매핑 정의
+1. main.c: 메인 루프, 하드웨어 초기화 및 이벤트 처리
+2. game.c: 게임 로직(충돌 감지, 스코어 계산), 렌더링 함수
+3. lcd.c: ST7735 LCD 드라이버 (SPI 커맨드 전송)
+4. mcp3008.c: ADC 데이터 리딩 (SPI 통신)
+5. music.c: 스레드 기반 BGM 재생 및 피치/속도 제어
+6. pins.h: GPIO 핀 매핑 정의
