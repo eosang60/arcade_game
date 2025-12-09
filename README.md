@@ -12,18 +12,16 @@ Audio: Pthread를 활용한 백그라운드 BGM 재생 (라운드 진행 시 템
 # Hardware Setup
 라즈베리 파이 GPIO 핀 연결 정보입니다. (pins.h 기준)
 
-Component    Pin/Protocol  Note
-
-1. LCD (ST7735),SPI0 (CE0),MOSI& SCLK
-2. LCD D/C,GPIO 5,
-3. LCD Reset,GPIO 12,
-4. ADC (MCP3008),SPI1 (CE0),Joystick X-axis -> CH0
-5. LED (Red),GPIO 17,Life 1
-6. LED (Yellow),GPIO 27,Life 2
-7. LED (Green),GPIO 22,Life 3
-8. Buzzer,GPIO 25,Active Buzzer
-9. Button,GPIO 24,Restart (Pull-up)
-Note: LCD는 SPI0, ADC는 SPI1 채널을 사용합니다. raspi-config에서 SPI 인터페이스가 활성화되어 있어야 합니다.
+0. Component    |Pin/Protocol  |Note
+1. LCD (ST7735) |SPI0 (CE0)    | MOSI, SCLK
+2. LCD D/C      |GPIO 5
+3. LCD Reset    |GPIO 12 
+4. ADC(MCP3008) |SPI1 (CE0)    |Joystick X-axis -> CH0
+5. LED (Red)    |GPIO 17       |Life 1
+6. LED (Yellow) |GPIO 27       |Life 2
+7. LED (Green)  |GPIO 22       |Life 3
+8. Buzzer       |GPIO 25       |Active Buzzer
+9. Button       |GPIO 24       |Restart (Pull-up)
 
 # Dependencies
 빌드 및 실행을 위해 아래 라이브러리가 필요합니다.
