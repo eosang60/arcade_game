@@ -1,6 +1,9 @@
-RPi Obstacle Dodge Game라즈베리 파이(Raspberry Pi)에서 동작하는 장애물 피하기 아케이드 게임입니다.
+RPi Obstacle Dodge Game
+라즈베리 파이(Raspberry Pi)에서 동작하는 장애물 피하기 아케이드 게임입니다.
 C언어로 작성되었으며 pigpio와 wiringPi 라이브러리를 사용하여 하드웨어(LCD, ADC, GPIO)를 직접 제어합니다.
-FeaturesGame Logic: 위에서 떨어지는 장애물을 피하는 서바이벌 방식
+
+Features
+Game Logic: 위에서 떨어지는 장애물을 피하는 서바이벌 방식
 Controls: 아날로그 조이스틱(MCP3008)을 이용한 부드러운 이동
 Display: ST7735 1.8인치 TFT LCD (SPI 통신)
 Indicators: 3색 LED를 이용한 실시간 체력(Life) 표시
